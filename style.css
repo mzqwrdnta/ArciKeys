@@ -1,0 +1,6 @@
+logo {
+    width: 1px;
+    height: 9px;
+    display: flex;
+    justify-content: space-between;
+}

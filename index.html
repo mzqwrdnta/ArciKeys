@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArciKeys - Gantungan Kunci Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+        .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Smooth Bezier Variables */
+      :root {
+        --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+        --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+      }
+
+      /* Intro Overlay - Smooth Fade Only (No Curtain) */
+      .intro-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 1s ease-in-out, visibility 1s;
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .intro-overlay.exit {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      /* Shimmer Text Effect */
+      .shimmer-text {
+        background: linear-gradient(
+          to right, 
+          #0f172a 20%, 
+          #e11d48 30%, 
+          #e11d48 70%, 
+          #0f172a 80%
+        );
+        background-size: 200% auto;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 3s linear infinite;
+      }
+
+      @keyframes shimmer {
+        to { background-position: 200% center; }
+      }
+
+      /* General Animations */
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes scaleUp {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-scale-up {
+        animation: scaleUp 0.4s var(--ease-out-expo) forwards;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+
+       @keyframes spin-reverse {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      .animate-spin-reverse {
+        animation: spin-reverse 25s linear infinite;
+      }
+      
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+      }
+
+       @keyframes spin-reverse {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      .animate-spin-reverse {
+        animation: spin-reverse 25s linear infinite;
+      }
+
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white text-slate-800">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
