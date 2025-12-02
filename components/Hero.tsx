@@ -91,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ onShopNow }) => {
              {/* Main Image */}
              {/* Using a high quality keychain image */}
              <img 
-               src="asset/produk.png" 
+               src="/asset/produk.png" 
                alt="Premium Keychain" 
                className="relative z-10 w-auto h-[80%] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] animate-float hover:scale-105 transition-transform duration-500"
              />
