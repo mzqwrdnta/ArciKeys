@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
         <div>
           <h4 className="text-white font-bold mb-6 text-lg">Informasi</h4>
           <ul className="space-y-4 text-sm font-medium">
-            <li><a href="#" className="hover:text-white transition-colors">Tentang Phlox</a></li>
+            <li><a href="#" className="hover:text-white transition-colors">Tentang Arci</a></li>
             <li><a href="#" className="hover:text-white transition-colors">Karir</a></li>
             <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
             <li><a href="#" className="hover:text-white transition-colors">Kontak Kami</a></li>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
 
       </div>
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-        <p>&copy; 2024 Phlox Store. All rights reserved.</p>
+        <p>&copy; 2026 ArciKeys Store. All rights reserved.</p>
         <div className="flex gap-6 mt-4 md:mt-0">
           <a href="#" className="hover:text-white">Terms</a>
           <a href="#" className="hover:text-white">Privacy</a>

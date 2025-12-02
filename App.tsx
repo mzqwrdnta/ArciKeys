@@ -336,10 +336,10 @@ const App: React.FC = () => {
                <div className="text-center mb-12">
                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full mb-4">
                     <Instagram className="w-4 h-4 text-pink-500" />
-                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wide">@phlox.official</span>
+                    <span className="text-xs font-bold text-slate-600 uppercase tracking-wide">@ArciKeys.official</span>
                  </div>
-                 <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">#PhloxStyle Gallery</h2>
-                 <p className="text-slate-500 max-w-2xl mx-auto">Lihat bagaimana customer kami memadukan Phlox dengan gaya harian mereka. Tag kami untuk kesempatan di-feature.</p>
+                 <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">#ArciStyle Gallery</h2>
+                 <p className="text-slate-500 max-w-2xl mx-auto">Lihat bagaimana customer kami memadukan ArciKeys dengan gaya harian mereka. Tag kami untuk kesempatan di-feature.</p>
                </div>
                
                <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-[500px] md:h-[600px]">
