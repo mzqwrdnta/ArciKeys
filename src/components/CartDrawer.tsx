@@ -19,7 +19,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartItems, onR
   });
 
   const totalPrice = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-  const adminPhone = "6285213963005"; // Replace with actual admin number
+  const adminPhone = "6288289806687"; // Replace with actual admin number
 
   const handleCheckout = (e: React.FormEvent) => {
     e.preventDefault();
