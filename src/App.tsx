@@ -7,7 +7,8 @@ import CartDrawer from './components/CartDrawer';
 import Footer from './components/Footer';
 import { Product, CartItem, PageView, Feedback } from '../types';
 import { ArrowRight, Truck, ShieldCheck, Star, Quote, Instagram, Award, MessageSquare, Send } from 'lucide-react';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
+
 
 
 // Intro Component - Elegant Fade
@@ -35,6 +36,8 @@ const IntroScreen = ({ onComplete }: { onComplete: () => void }) => {
   }, [onComplete]);
 
   return (
+
+
     <div className={`intro-overlay ${exiting ? 'exit' : ''}`}>
       <div className="intro-content text-center">
 
@@ -74,76 +77,166 @@ const IntroScreen = ({ onComplete }: { onComplete: () => void }) => {
 const PRODUCTS: Product[] = [
   {
     id: 1,
-    name: 'Classic Leather Keychain',
-    price: 45000,
-    description: 'Gantungan kunci kulit asli dengan jahitan tangan premium. Tahan lama dan semakin estetik seiring waktu. Cocok untuk kunci mobil atau motor.',
-    image: '/asset/produk/produk.jpg',
-    category: 'Leather',
+    name: 'KB-1',
+    price: 7000,
+    description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
+    image: '/asset/kawat/KB1.jpg',
+    category: 'Kawat Chenille',
     colors: ['Coklat', 'Hitam', 'Tan']
   },
   {
     id: 2,
-    name: 'Modern Acrylic Custom',
-    price: 25000,
-    description: 'Bahan akrilik bening berkualitas tinggi, anti gores. Desain minimalis yang bisa di-custom nama atau inisial sesuai keinginan.',
-    image: '/asset/galary1.jpg',
-    category: 'Acrylic',
-    colors: ['Bening', 'Hitam Smoke', 'Putih Susu']
+    name: 'KB-7',
+    price: 5000,
+    description: 'Hadirkan sentuhan lucu dan menggemaskan pada kunci, tas, atau pouch Anda dengan gantungan kunci ubur-ubur handmade yang unik ini!. Dibuat dengan teliti menggunakan Kawat Chenille  berkualitas, gantungan kunci ini memiliki tekstur yang lembut, empuk, dan tampilan yang sangat menarik. Desain ubur-ubur yang imut dengan tentakel meliuk-liuk menjadikannya aksesori yang sempurna untuk segala usia..',
+    image: '/asset/kawat/bulu5.jpg',
+    category: 'Kawat Chenille',
+    colors: ['Biru', 'Pink']
   },
   {
     id: 3,
-    name: 'Tactical Carabiner',
-    price: 65000,
-    description: 'Gantungan kunci model karabiner tactical. Kuat menahan beban berat, terbuat dari alloy anti karat. Cocok untuk gaya outdoor.',
+    name: 'KB-3',
+    price: 5000,
+    description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
     image: '/asset/galary2.jpg',
-    category: 'Metal',
+    category: 'Kawat Chenille',
     colors: ['Hitam Matte', 'Silver', 'Army Green']
   },
   {
     id: 4,
-    name: 'Minimalist Paracord Loop',
-    price: 35000,
-    description: 'Desain loop sederhana namun elegan. Menggunakan tali paracord yang kuat dan pengait premium.',
-    image: '/asset/galary3.jpg',
-    category: 'Custom',
-    colors: ['Merah', 'Biru Navy', 'Hitam']
+    name: 'KB-6',
+    price: 3000,
+   description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
+    image: '/asset/kawat/KB6.jpg',
+    category: 'Kawat Chenille',
+    colors: ['Pink', 'Biru']
   },
   {
     id: 5,
-    name: 'Vintage Brass Key',
-    price: 85000,
-    description: 'Terbuat dari bahan kuningan asli (solid brass). Memberikan kesan vintage yang kuat dan premium.',
-    image: '/asset/galary4.jpg',
+    name: 'Type A',
+    price: 6000,
+    description: 'Gantungan kunci tunggal dengan gaya dangle yang berani dan stylish. Rangkaian manik-manik padat memberikan kesan mewah yang terpusat.',
+    image: '/asset/metal/TipeA.jpg',
     category: 'Metal',
-    colors: ['Gold']
+    colors: ['Original' ]
   },
   {
     id: 6,
-    name: 'Photo Frame Keychain',
-    price: 30000,
-    description: 'Simpan foto orang tersayang di gantungan kunci ini. Bahan akrilik tebal melindungi foto agar tidak pudar.',
-    image: '/asset/produk.png',
-    category: 'Acrylic',
-    colors: ['Bening']
+    name: 'Type G',
+    price: 7000,
+   description: 'Gantungan kunci tunggal dengan gaya dangle yang berani dan stylish. Rangkaian manik-manik padat memberikan kesan mewah yang terpusat.',
+    image: '/asset/metal/TipeG.jpg',
+    category: 'Metal',
+    colors: ['Original' ]
   },
   {
     id: 7,
-    name: 'Leather Strap Pro',
-    price: 55000,
-    description: 'Strap kulit panjang yang bisa dikalungkan atau digantung di tas. Stylish dan fungsional.',
-    image: '/asset/galary1.jpg',
-    category: 'Leather',
-    colors: ['Coklat Tua', 'Maroon', 'Hitam']
+    name: 'Type H',
+    price: 9000,
+    description: 'Gantungan kunci tunggal dengan gaya dangle yang berani dan stylish. Rangkaian manik-manik padat memberikan kesan mewah yang terpusat.',
+    image: '/asset/metal/TipeH.jpg',
+    category: 'Metal',
+    colors: ['Original']
   },
   {
     id: 8,
-    name: 'Custom Engraved Metal',
-    price: 75000,
-    description: 'Plat metal stainless steel dengan ukiran laser permanen. Anti karat dan terlihat sangat eksklusif.',
-    image: '/asset/produk/produk.jpg',
+    name: 'Type I',
+    price: 6000,
+   description: 'Gantungan kunci tunggal dengan gaya dangle yang berani dan stylish. Rangkaian manik-manik padat memberikan kesan mewah yang terpusat.',
+    image: '/asset/metal/TipeI.jpg',
     category: 'Metal',
-    colors: ['Silver', 'Gold Plated']
-  }
+    colors: ['Original']
+  },
+
+    {
+    id: 9,
+    name: 'Type J',
+    price: 6000,
+   description: 'Gantungan kunci tunggal dengan gaya dangle yang berani dan stylish. Rangkaian manik-manik padat memberikan kesan mewah yang terpusat.',
+    image: '/asset/metal/TipeJ.jpg',
+    category: 'Metal',
+    colors: ['Original']
+  },
+
+    {
+    id: 10,
+    name: 'Type K',
+    price: 7000,
+    description: 'Gantungan kunci tunggal dengan gaya dangle yang berani dan stylish. Rangkaian manik-manik padat memberikan kesan mewah yang terpusat.',
+    image: '/asset/metal/TipeK.jpg',
+    category: 'Metal',
+    colors: ['Original']
+  },
+
+      {
+    id: 11,
+    name: 'Type L',
+    price: 15000,
+    description: 'Gantungan kunci set pasangan dan temanyang dirancang untuk berbagi. Kedua bagian dirangkai dengan beads yang unik dan dihubungkan oleh rantai metal dengan charm hati sebagai simbol ikatan.',
+    image: '/asset/couple/tipeL.jpg',
+    category: 'couple',
+    colors: ['Original']
+  },
+
+  {
+    id: 12,
+    name: 'Type M',
+    price: 17000,
+       description: 'Gantungan kunci set pasangan dan temanyang dirancang untuk berbagi. Kedua bagian dirangkai dengan beads yang unik dan dihubungkan oleh rantai metal dengan charm hati sebagai simbol ikatan.',
+    image: '/asset/couple/tipem.jpg',
+    category: 'couple',
+    colors: ['Original']
+  },
+
+    {
+    id: 13,
+    name: 'Type E',
+    price: 15000,
+    description: 'Gantungan kunci set pasangan dan temanyang dirancang untuk berbagi. Kedua bagian dirangkai dengan beads yang unik dan dihubungkan oleh rantai metal dengan charm hati sebagai simbol ikatan.',
+    image: '/asset/couple/tipeE.jpg',
+    category: 'couple',
+    colors: ['Original']
+  },
+
+      {
+    id: 14,
+    name: 'KB 2',
+    price: 5000,
+    description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
+    image: '/asset/kawat/KB2.jpg',
+    category: 'Kawat Chenille',
+    colors: ['Biru', 'Kuning', 'Pink']
+  },
+
+  {
+    id: 15,
+    name: 'KB 4',
+    price: 5000,
+   description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
+    image: '/asset/kawat/KB4.jpg',
+    category: 'Kawat Chenille',
+    colors: ['Original']
+  },
+
+    {
+    id: 16,
+    name: 'KB 5',
+    price: 6000,
+  description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
+    image: '/asset/kawat/KB5.jpg',
+    category: 'Kawat Chenille',
+    colors: ['Original']
+  },
+
+    {
+    id: 17,
+    name: 'KB 5 White',
+    price: 6000,
+  description: 'Tambahkan sentuhan kelembutan dan warna-warni yang menggemaskan pada kunci, tas, atau dompet Anda dengan kreasi handmade yang unik ini!. Dibuat dengan teliti menggunakan material Kawat Chenille berkualitas, aksesori ini memiliki tekstur yang lembut dan berbulu. Desainnya yang fluffy dan detail-detail melengkung yang menjuntai memberikan tampilan yang eye-catching dan menawan.',
+    image: '/asset/kawat/KB51.jpg',
+    category: 'Kawat Chenille',
+    colors: ['Original']
+  },
 ];
 
 const App: React.FC = () => {
@@ -243,11 +336,11 @@ const App: React.FC = () => {
             <div className="max-w-7xl mx-auto px-6">
               <p className="text-center text-xs font-bold text-slate-400 mb-6 uppercase tracking-widest">Featured In</p>
               <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 hover:opacity-100 transition-all duration-500">
-                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">VOGUE</span>
-                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">HYPEBEAST</span>
-                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">GQ</span>
-                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">Esquire</span>
-                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">Urban</span>
+                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">SMALL</span>
+                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">SLEEK</span>
+                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">ABSTRACT</span>
+                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">MODERN</span>
+                <span className="text-xl md:text-2xl font-black text-slate-900 tracking-tighter cursor-default">ICONIC</span>
               </div>
             </div>
           </section>
@@ -304,7 +397,7 @@ const App: React.FC = () => {
                 >
                   <img src="/asset/galary3.jpg" alt="Leather" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                    <h3 className="text-white text-2xl font-bold mb-2 translate-y-2 group-hover:translate-y-0 transition-transform">Leather Series</h3>
+                    <h3 className="text-white text-2xl font-bold mb-2 translate-y-2 group-hover:translate-y-0 transition-transform">Kawat Chenille</h3>
                     <p className="text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300 delay-100">Elegan dan klasik.</p>
                   </div>
                 </div>
@@ -312,9 +405,9 @@ const App: React.FC = () => {
                   onClick={() => setCurrentPage('STORE')}
                   className="group relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all"
                 >
-                  <img src="/asset/produk/produk.jpg" alt="Metal" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src="/asset/couple2.jpg" alt="Metal" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                    <h3 className="text-white text-2xl font-bold mb-2 translate-y-2 group-hover:translate-y-0 transition-transform">Metal Series</h3>
+                    <h3 className="text-white text-2xl font-bold mb-2 translate-y-2 group-hover:translate-y-0 transition-transform">Couple Series</h3>
                     <p className="text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300 delay-100">Kuat, kokoh, dan tahan lama.</p>
                   </div>
                 </div>
@@ -322,9 +415,9 @@ const App: React.FC = () => {
                   onClick={() => setCurrentPage('STORE')}
                   className="group relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all"
                 >
-                  <img src="/asset/galary1.jpg" alt="Custom" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src="/asset/metal/metal2.jpg" alt="Custom" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
-                    <h3 className="text-white text-2xl font-bold mb-2 translate-y-2 group-hover:translate-y-0 transition-transform">Custom Art</h3>
+                    <h3 className="text-white text-2xl font-bold mb-2 translate-y-2 group-hover:translate-y-0 transition-transform">Metal Series</h3>
                     <p className="text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300 delay-100">Ekspresikan dirimu tanpa batas.</p>
                   </div>
                 </div>
@@ -352,7 +445,7 @@ const App: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-span-1 row-span-1 relative rounded-3xl overflow-hidden group shadow-lg">
-                  <img src="/asset/galary2.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery 2" />
+                  <img src="/asset/couple2.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery 2" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                 </div>
                 <div className="col-span-1 row-span-2 relative rounded-3xl overflow-hidden group shadow-lg">
@@ -360,7 +453,7 @@ const App: React.FC = () => {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                 </div>
                 <div className="col-span-1 row-span-1 relative rounded-3xl overflow-hidden group shadow-lg">
-                  <img src="/asset/galary4.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery 4" />
+                  <img src="/asset/metal/metal2.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery 4" />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
                 </div>
               </div>
