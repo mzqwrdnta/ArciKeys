@@ -7,7 +7,6 @@ import CartDrawer from './components/CartDrawer';
 import Footer from './components/Footer';
 import { Product, CartItem, PageView, Feedback } from '../types';
 import { ArrowRight, Truck, ShieldCheck, Star, Quote, Instagram, Award, MessageSquare, Send, MessageCircle } from 'lucide-react';
-import { Analytics } from "@vercel/analytics/react"
 
 
 

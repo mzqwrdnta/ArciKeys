@@ -91,7 +91,7 @@ const Hero: React.FC<HeroProps> = ({ onShopNow }) => {
             {/* Main Image */}
             {/* Using a high quality keychain image */}
             <img
-              src="/asset/hero2.png"
+              src="/asset/hero.png"
               alt="Premium Keychain"
               className="relative z-10 w-auto h-[100%] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] animate-float hover:scale-105 transition-transform duration-500"
             />
@@ -104,7 +104,7 @@ const Hero: React.FC<HeroProps> = ({ onShopNow }) => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 font-bold uppercase">Best Seller</p>
-                  <p className="text-lg font-black text-slate-900">Rp 45.000</p>
+                  <p className="text-lg font-black text-slate-900">Rp 5.000</p>
                 </div>
               </div>
             </div>
